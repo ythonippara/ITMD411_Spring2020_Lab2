@@ -106,16 +106,8 @@ public class BankRecords extends Client {
 			System.out.println(s);
 		}
 	} // End printData()
-	
-	public static void main(String[] args) {
-		
-		BankRecords br = new BankRecords();
-		br.readData();
 
-	}
-	
 	// Getters & setters for instance fields
-	
 	public static BankRecords[] getRobjs() {
 		return robjs;
 	}
