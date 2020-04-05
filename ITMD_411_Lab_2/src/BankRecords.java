@@ -1,3 +1,14 @@
+/**
+ * This program reads data from a .csv file,
+ * stores records in ArrayList and prints out
+ * a report in a tabular form. The report includes
+ * 25 rows of data for the following columns:
+ * ID, AGE, SEX, REGION, INCOME, MORTGAGE.
+ * 
+ * @author Yulia Thonippara (A20411313)
+ * Created for ITMD 411 Spring 2020
+ */
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -11,11 +22,11 @@ public class BankRecords extends Client {
 	// Set up static objects for IO processing
 
 	// Array of BankRecords objects
-	static BankRecords robjs[] = new BankRecords[600];
+	//static BankRecords robjs[] = new BankRecords[600];
 	
-	// Code optimizing 
-	// Use processData() to determine # of records, then use size()
-	// static BankRecords robjs[];
+	// Code optimization
+	// Use readData() to determine # of records, then use size()
+	static BankRecords robjs[];
 	
 	// ArrayList to hold spreadsheet rows & columns
 	static ArrayList<List<String>> array = new ArrayList<>();
@@ -68,7 +79,7 @@ public class BankRecords extends Client {
 	@Override
 	public void processData() {
 		
-		// robjs = new BankRecords[array.size()]; 
+		robjs = new BankRecords[array.size()]; 
 		
 		// Create index for array while iterating through ArrayList
 		int idx=0;
