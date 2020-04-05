@@ -79,7 +79,7 @@ public class BankRecords extends Client {
 			// Initialize array of objects
 			robjs[idx] = new BankRecords();
 			// Call setters below and populate them item by item
-			robjs[idx].setId(rowData.get(0)); // Get 1st column
+			robjs[idx].setId(rowData.get(0).substring(2)); // Get 1st column, remove "id" characters
 			robjs[idx].setAge(Integer.parseInt(rowData.get(1))); // Get 2nd column
 			robjs[idx].setSex(rowData.get(2)); // Get 3rd column
 			robjs[idx].setRegion(rowData.get(3)); // Get 4th column
@@ -101,7 +101,7 @@ public class BankRecords extends Client {
 		for (int i=0; i < 25 ; i++){
 			// 3. Within for loop use appropriate formatting techniques to print
 			//   out record detail  
-			String s = String.format("%s\t\t%d\t\t%s\t\t%-8s\t\t%-8.2f\t\t%s", robjs[i].getId(), robjs[i].getAge(), 
+			String s = String.format("%s\t\t%d\t\t%s\t\t%-8s\t\t$%-8.2f\t\t%s", robjs[i].getId(), robjs[i].getAge(), 
 					robjs[i].getSex(), robjs[i].getRegion(), robjs[i].getIncome(), robjs[i].getMortgage());
 			System.out.println(s);
 		}
