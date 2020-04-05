@@ -2,9 +2,9 @@
 public class BankRecordsTest {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+		// Create an object of BankRecords class
 		BankRecords br = new BankRecords();
+		// Call readData() 
 		br.readData();
 
 	} // End main()

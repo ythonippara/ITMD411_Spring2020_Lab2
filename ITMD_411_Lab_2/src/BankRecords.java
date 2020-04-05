@@ -95,13 +95,13 @@ public class BankRecords extends Client {
 	public void printData() {
 		
 		// 1. Set appropriate headings for displaying first 25 records
-		System.out.println("ID\t\tAGE\t\tSEX\t\tREGION\t\tINCOME\t\tMORTGAGE");
+		System.out.println("ID\t\tAGE\t\tSEX\t\tREGION\t\t\tINCOME\t\t\tMORTGAGE");
 		
 		// 2. Create for loop and print each record objects instance data
 		for (int i=0; i < 25 ; i++){
 			// 3. Within for loop use appropriate formatting techniques to print
 			//   out record detail  
-			String s = String.format("%s\t\t%d\t\t%s\t\t%s\t\t%.2f\t\t%s", robjs[i].getId(), robjs[i].getAge(), 
+			String s = String.format("%s\t\t%d\t\t%s\t\t%-8s\t\t%-8.2f\t\t%s", robjs[i].getId(), robjs[i].getAge(), 
 					robjs[i].getSex(), robjs[i].getRegion(), robjs[i].getIncome(), robjs[i].getMortgage());
 			System.out.println(s);
 		}
